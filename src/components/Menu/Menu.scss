@@ -1,0 +1,28 @@
+@import '../../styles/variables/numerical.scss';
+
+.menu {
+  margin: 0;
+  padding: 15px 0;
+
+  .iconContainer {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    margin-right: 12px;
+  }
+  .subMenuTitle {
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 42px;
+    margin-left: -4px;
+  }
+}
+
+.menu :global {
+  .ant-menu-item-selected.ant-menu-item {
+    background-color: #fff;
+  }
+  .ant-menu-item:active, .ant-menu-submenu-title:active {
+    background-color: #fff;
+  }
+}

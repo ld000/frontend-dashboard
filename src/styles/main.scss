@@ -1,21 +1,103 @@
-@import 'base';
-@import '~bootstrap/scss/bootstrap.scss';
+:global {
+  @import '~biu.js/dist/biu';
+  @import '~normalize.css/normalize';
+  @import 'base';
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+  }
 
-// Some best-practice CSS that's useful for most apps
-// Just remove them if they're not what you want
-html {
-  box-sizing: border-box;
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  // customize
+  body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+  }
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  code,
+  form,
+  fieldset,
+  legend,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td,
+  hr,
+  button,
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    margin: 0;
+    padding: 0;
+  }
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    min-height: 48px;
+    background: #d2d2d2;
+    background-clip: padding-box;
+    border: 3px solid #fff;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #888;
+    border-width: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
 }

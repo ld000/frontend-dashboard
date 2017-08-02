@@ -1,0 +1,41 @@
+$highlight-color: #108ee9;
+
+.menu-li {
+  list-style: none;
+  display: block;
+  // margin-left: -4px;
+
+  .menu-navlink {
+    display: block;
+    width: 100%;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+  }
+
+  i {
+    width: 20px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.1em;
+    line-height: 42px;
+  }
+
+  .menu-navlink-active {
+    color: $highlight-color;
+  }
+}
+
+.menu-li:hover a {
+  color: $highlight-color;
+}
+
+.active {
+  .menu-navlink {
+    color: $highlight-color;
+  }
+}
