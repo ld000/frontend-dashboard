@@ -1,0 +1,76 @@
+.main-route {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.c-spinner {
+  width: 58px;
+  height: 58px;
+  position: relative;
+}
+
+.c-spinner__leaf:before {
+  content:'';
+  display:block;
+  width: 26px;
+  height: 26px;
+  background: #F5C61D;
+  opacity: 0.9;
+  margin: 2px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.c-spinner__leaf {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.leaf--1 {
+  animation: 3s rotate1 infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.leaf--2 {
+  animation: 3s  rotate2 infinite  cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.leaf--3 {
+  animation: 3s   rotate3 infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.leaf--4 {
+  animation: 3s   rotate4 infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.c-spinner {
+  animation: 3s rotate infinite linear;
+}
+
+@keyframes rotate {
+  0%  {transform: rotate(0)}
+  100%  {transform: rotate(360deg)}
+}
+
+@keyframes rotate2 {
+  0%  {transform: rotate(0)}
+  30%  {transform: rotate(270deg)}
+  70%  {transform: rotate(270deg)}
+  100%  {transform: rotate(360deg)}
+}
+
+@keyframes rotate3 {
+  0%  {transform: rotate(0)}
+  30%  {transform: rotate(180deg)}
+  70%  {transform: rotate(180deg)}
+  100%  {transform: rotate(360deg)}
+}
+
+@keyframes rotate4 {
+  0%  {transform: rotate(0)}
+  30% {transform: rotate(90deg)}
+  70% {transform: rotate(90deg)}
+  100%  {transform: rotate(360deg)}
+}
