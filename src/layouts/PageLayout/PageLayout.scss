@@ -6,3 +6,28 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.layout {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 20px 20px 20px 20px;
+}
+
+.content-layout {
+  @extend .layout;
+  left: 240px;
+}
+
+.content-layout--hideNavbar {
+  @extend .layout;
+  left: 0;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 60px);
+  position: relative;
+}

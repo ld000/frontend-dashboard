@@ -12,7 +12,6 @@ type Props = {
   openLeft: Function,
   closeLeft: Function,
   location: Object,
-  charter: String,
   isOrNotSuper: Boolean
 }
 
@@ -39,8 +38,6 @@ export class LeftSide extends React.Component {
 
   componentDidUpdate () {
     let left = this.refs.leftSide
-    let open = this.refs.open
-    let contentLayout = document.getElementById('content-layout')
     let testIcon = document.querySelector('#testIcon')
 
     // if (this.props.leftSideLayout.expandStatus === 'close') {
@@ -57,12 +54,11 @@ export class LeftSide extends React.Component {
     //   // testIcon.style.left = 'calc(50% - 20px)'
     // }
 
-    open.children[0].className = 'fa fa-angle-left'
     // contentLayout.style.left = '220px'
     left.className = 'left_side-layout_open'
-    testIcon.setAttribute('data-currstate', 'open')
+    // testIcon.setAttribute('data-currstate', 'open')
 
-    this.addHover()
+    // this.addHover()
   }
   handleOpen () {
     let left = this.refs.leftSide
@@ -117,7 +113,8 @@ export class LeftSide extends React.Component {
   render () {
     const navs = () => {
       return [
-        { name: '概览', link: '/rainbolt', icon: 'fa fa-tachometer' }
+        { name: 'rainbolt', link: '/rainbolt', icon: 'fa fa-tachometer' },
+        { name: 'flower', link: '/flower', icon: 'fa fa-tachometer' }
       ]
     }
 
@@ -131,18 +128,6 @@ export class LeftSide extends React.Component {
           <div className='left_side-bookmarkOpen' title='收藏'>
             <i className='fa fa-star' aria-hidden='true'
               onMouseDown={this.handleBookmarkOpenDown} onMouseUp={this.handleBookmarkOpenUp} />
-          </div>
-          <div style={{ display: 'none' }}>
-
-          </div>
-          <div className='left_side-open' ref='open'>
-            <i className='fa fa-angle-left' aria-hidden='true' onClick={this.handleOpen}
-              style={{ display: 'none' }} />
-            <button type='button' className='tcon tcon-grid tcon-grid--rearrange'
-              aria-label='toggle grid' id='testIcon' data-currstate='close' onClick={this.handleOpen}>
-              <span className='tcon-grid__item' aria-hidden='true' />
-              <span className='tcon-visuallyhidden'>toggle grid</span>
-            </button>
           </div>
         </div>
       </div>
