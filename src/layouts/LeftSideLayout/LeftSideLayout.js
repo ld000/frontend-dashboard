@@ -114,7 +114,8 @@ export class LeftSide extends React.Component {
     const navs = () => {
       return [
         { name: 'rainbolt', link: '/rainbolt', icon: 'fa fa-tachometer' },
-        { name: 'flower', link: '/flower', icon: 'fa fa-tachometer' }
+        { name: 'flower', link: '/flower', icon: 'fa fa-tachometer' },
+        { name: 'floating', link: '/floating', icon: 'fa fa-tachometer' }
       ]
     }
 

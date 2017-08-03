@@ -4,6 +4,7 @@ import Home from './Home'
 import CounterRoute from './Counter'
 import Rainbolt from './Rainbolt'
 import Flower from './Flower'
+import Floating from './Floating'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -15,7 +16,8 @@ export const createRoutes = (store) => ({
   childRoutes : [
     CounterRoute(store),
     Rainbolt(),
-    Flower()
+    Flower(),
+    Floating()
   ]
 })
 
