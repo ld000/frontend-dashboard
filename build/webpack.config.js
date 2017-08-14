@@ -134,6 +134,29 @@ config.module.rules.push({
     ],
   })
 })
+
+const CSS_PATTERN = /\.css$/
+
+config.module.rules.push({
+  test    : CSS_PATTERN,
+  exclude : /node_modules/,
+  use : [
+    {
+      loader: 'style-loader'
+    },
+    {
+      loader: 'css-loader',
+      options: {
+        sourcemap: project.sourcemaps,
+        minimize: false,
+        modules: true,
+        importLoaders: 1,
+        // localIdentName: '[name]__[local]___[hash:base64:5]'
+      }
+    }
+  ]
+})
+
 config.plugins.push(extractStyles)
 
 // Images

@@ -5,6 +5,7 @@ import CounterRoute from './Counter'
 import Rainbolt from './Rainbolt'
 import Flower from './Flower'
 import Floating from './Floating'
+import SVGLine from './SVGLine'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -17,7 +18,8 @@ export const createRoutes = (store) => ({
     CounterRoute(store),
     Rainbolt(),
     Flower(),
-    Floating()
+    Floating(),
+    SVGLine()
   ]
 })
 

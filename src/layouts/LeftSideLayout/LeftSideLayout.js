@@ -38,7 +38,6 @@ export class LeftSide extends React.Component {
 
   componentDidUpdate () {
     let left = this.refs.leftSide
-    let testIcon = document.querySelector('#testIcon')
 
     // if (this.props.leftSideLayout.expandStatus === 'close') {
     //   open.children[0].className = 'fa fa-angle-right'
@@ -115,7 +114,8 @@ export class LeftSide extends React.Component {
       return [
         { name: 'rainbolt', link: '/rainbolt', icon: 'fa fa-tachometer' },
         { name: 'flower', link: '/flower', icon: 'fa fa-tachometer' },
-        { name: 'floating', link: '/floating', icon: 'fa fa-tachometer' }
+        { name: 'floating', link: '/floating', icon: 'fa fa-tachometer' },
+        { name: 'SVGLine', link: '/svg-line', icon: 'fa fa-tachometer' }
       ]
     }
 
